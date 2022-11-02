@@ -1,17 +1,17 @@
 {% set name = "prefect-ray" %}
-{% set version = "0.2.0.post2" %}
+{% set version = "0.2.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 763effd3806e493a901c7542b8f3e25a92806222669b33cdb335c70a53050822
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4bd7941e468abd0b370e96b75335f28297c57022572f763174dd90cc4e9492fc
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   noarch: python
 
 requirements:
@@ -32,11 +32,11 @@ test:
     - pip check
 
 about:
-  home: "https://github.com/PrefectHQ/prefect-ray"
+  home: https://github.com/PrefectHQ/prefect-ray
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: "Prefect integrations with the Ray execution framework."
+  summary: Prefect integrations with the Ray execution framework.
   doc_url: https://prefecthq.github.io/prefect-ray/
   dev_url: https://github.com/PrefectHQ/prefect-ray
 
