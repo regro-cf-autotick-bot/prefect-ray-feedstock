@@ -1,5 +1,5 @@
 {% set name = "prefect-ray" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4bd7941e468abd0b370e96b75335f28297c57022572f763174dd90cc4e9492fc
+  sha256: 1ce93e966c7aa10c41cd3b8f41dc66b78a223b553aa0aad0bae06c962de9cf6a
 
 build:
   number: 0
@@ -19,7 +19,7 @@ requirements:
     - pip
     - python  >=3.8
   run:
-    - prefect >=2.3.0
+    - prefect >=2.6.0
     - ray-core
     - python >=3.8
 
