@@ -1,5 +1,5 @@
 {% set name = "prefect-ray" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ce93e966c7aa10c41cd3b8f41dc66b78a223b553aa0aad0bae06c962de9cf6a
+  sha256: bd041b0e67004565e2731932f9416ff358ad105bfd0de7839cf8f9982eb75c82
 
 build:
   number: 0
