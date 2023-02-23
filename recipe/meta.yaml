@@ -19,7 +19,7 @@ requirements:
     - pip
     - python  >=3.8
   run:
-    - prefect >=2.6.0
+    - prefect >=2.8.2
     - ray-core
     - python >=3.8
 
