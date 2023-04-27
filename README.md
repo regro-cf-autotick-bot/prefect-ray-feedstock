@@ -1,11 +1,11 @@
-About prefect-ray
-=================
+About prefect-ray-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-ray-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PrefectHQ/prefect-ray
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prefect-ray-feedstock/blob/main/LICENSE.txt)
 
 Summary: Prefect integrations with the Ray execution framework.
 
