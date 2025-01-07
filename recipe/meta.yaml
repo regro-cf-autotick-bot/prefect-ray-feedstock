@@ -6,28 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: bd041b0e67004565e2731932f9416ff358ad105bfd0de7839cf8f9982eb75c82
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   noarch: python
 
 requirements:
   host:
     - pip
-    - python  >=3.8
+    - python {{ python_min }}
   run:
     - prefect >=2.8.2
     - ray-core
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
     - prefect_ray
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
